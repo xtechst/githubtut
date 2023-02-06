@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xhosatech Animation</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .explosion{
+            position: absolute;
+            display: none;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-color: red;
+            animation: explosion 1s ease-out;
+        }
+
+        @keyframes explosion {
+            0%{
+                transform: scale(0);
+            }
+            100%{
+                transform: scale(1);
+            }   
+        }
+    </style>
+</head>
+<body>
+    <div class="explosion">
+    </div>
+    <h1 style="color: white;">Xhosatech Animation</h1>
+    <script>
+        const explosion = document.querySelector('.explosion');
+
+        setInterval(() => {
+            explosion.style.display =' block';
+            setTimeout(() => {
+                explosion.style.display = ' none'
+            }, 1000)
+        }, 2000)
+    </script>
+</body>
+
+</html>
